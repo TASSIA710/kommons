@@ -2,7 +2,7 @@ group = "net.tassia"
 version = "1.0.0"
 
 plugins {
-	java
+	java; `java-library`; `maven-publish`
 }
 
 repositories {
@@ -25,4 +25,20 @@ java {
 
 	sourceCompatibility = JavaVersion.VERSION_1_8
 	targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+publishing {
+	publications {
+		create<MavenPublication>("mavenJava") {
+			from(components["java"])
+		}
+	}
+	repositories {
+		maven("https://nexus.tassia.net/repository/maven-releases/") {
+			credentials {
+				username = (findProperty("publishMavenUsername") as String?) ?: "N/A"
+				password = (findProperty("publishMavenPassword") as String?) ?: "N/A"
+			}
+		}
+	}
 }
