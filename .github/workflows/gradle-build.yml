@@ -13,7 +13,7 @@ jobs:
       - name: Start Gradle Daemon
         run: "gradle init"
       - name: Build
-        run: "gradle build"
+        run: "gradle assemble"
       - name: Test
         run: "gradle test"
 
