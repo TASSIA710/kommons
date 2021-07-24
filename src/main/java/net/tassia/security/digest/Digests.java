@@ -1,6 +1,7 @@
 package net.tassia.security.digest;
 
 import net.tassia.security.digests.MD5Digest;
+import net.tassia.security.digests.SHA1Digest;
 import net.tassia.util.Base64;
 
 import java.util.Arrays;
@@ -22,7 +23,7 @@ public final class Digests {
 	 */
 	@SuppressWarnings("unchecked")
 	private static Digest<? extends DigestParameters>[] DIGESTS = new Digest[] {
-		MD5Digest.INSTANCE,
+		MD5Digest.INSTANCE, SHA1Digest.INSTANCE
 	};
 
 
