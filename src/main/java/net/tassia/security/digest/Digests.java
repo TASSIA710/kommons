@@ -1,5 +1,6 @@
 package net.tassia.security.digest;
 
+import net.tassia.security.digests.MD5Digest;
 import net.tassia.util.Base64;
 
 import java.util.Arrays;
@@ -14,12 +15,14 @@ import java.util.regex.Pattern;
  */
 public final class Digests {
 
-	public static final Pattern DIGEST_STRING_PATTERN = Pattern.compile("\\$([A-z0-9_-]*)\\$([A-z0-9_-]*)\\$([A-z0-9_-]*)\\$([A-z0-9_-]*)");
+	public static final Pattern DIGEST_STRING_PATTERN = Pattern.compile("\\$([A-z0-9]*)\\$([A-z0-9_=-]*)\\$([A-z0-9_=-]*)\\$([A-z0-9_=-]*)");
 
 	/**
 	 * An array containing all available digests.
 	 */
+	@SuppressWarnings("unchecked")
 	private static Digest<? extends DigestParameters>[] DIGESTS = new Digest[] {
+		MD5Digest.INSTANCE,
 	};
 
 
@@ -106,7 +109,7 @@ public final class Digests {
 	@SuppressWarnings({"rawtypes", "unchecked"})
 	public static boolean verify(String digestString, byte[] data) {
 		Matcher match = DIGEST_STRING_PATTERN.matcher(digestString);
-		if (!match.group(0).equals(digestString)) {
+		if (!match.matches() || !match.group(0).equals(digestString)) {
 			throw new IllegalArgumentException(digestString + " is not a valid digest string.");
 		}
 

@@ -8,12 +8,15 @@ import org.junit.jupiter.params.provider.ValueSource;
 public class DigestsTest {
 
 	@ParameterizedTest
-	@ValueSource(classes = {})
-	public void testRandomized(Digest<?> digest) {
+	@ValueSource(strings = {
+		"MD5"
+	})
+	public void testRandomized(String digestName) {
 		for (int i = 0; i < Tests.ENTROPY_ITERATIONS; i++) {
 			byte[] salt = Tests.randomData();
 			byte[] data = Tests.randomData();
 
+			Digest<?> digest = Digests.getDigest(digestName);
 			String str = Digests.digest(digest, salt, data);
 			Assertions.assertTrue(Digests.verify(str, data));
 
