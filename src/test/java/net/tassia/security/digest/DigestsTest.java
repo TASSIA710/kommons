@@ -9,7 +9,7 @@ public class DigestsTest {
 
 	@ParameterizedTest
 	@ValueSource(strings = {
-		"MD5", "SHA-1", "SHA-224", "SHA-256"
+		"MD5", "SHA-1", "SHA-224", "SHA-256", "SHA-384"
 	})
 	public void testRandomized(String digestName) {
 		for (int i = 0; i < Tests.ENTROPY_ITERATIONS; i++) {
