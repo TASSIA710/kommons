@@ -8,6 +8,8 @@ jobs:
     container:
       image: gradle
     steps:
+      - name: Checkout Repository
+        uses: "actions/checkout@v2"
       - name: Start Gradle Daemon
         run: "gradle init"
       - name: Build
