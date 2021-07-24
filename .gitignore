@@ -7,6 +7,7 @@
 gradle/
 /gradlew
 /gradlew.bat
+/gradle.properties
 
 # Build Output
 build/
