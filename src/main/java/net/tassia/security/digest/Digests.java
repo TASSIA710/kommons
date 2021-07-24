@@ -22,7 +22,8 @@ public final class Digests {
 	 */
 	@SuppressWarnings("unchecked")
 	private static Digest<? extends DigestParameters>[] DIGESTS = new Digest[] {
-		MD5Digest.INSTANCE, SHA1Digest.INSTANCE, SHA224Digest.INSTANCE, SHA256Digest.INSTANCE, SHA384Digest.INSTANCE
+		MD5Digest.INSTANCE, SHA1Digest.INSTANCE,
+		SHA224Digest.INSTANCE, SHA256Digest.INSTANCE, SHA384Digest.INSTANCE, SHA512Digest.INSTANCE,
 	};
 
 
