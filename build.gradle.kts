@@ -1,0 +1,27 @@
+group = "net.tassia"
+version = "1.0.0"
+
+plugins {
+	java
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+}
+
+tasks.getByName<Test>("test") {
+	useJUnitPlatform()
+}
+
+java {
+	withJavadocJar()
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
