@@ -4,6 +4,8 @@ import java.util.function.Predicate;
 
 public class Parser {
 
+	public static final char EOF = (char) -1;
+
 	protected final String source;
 	protected int index = 0;
 
@@ -13,16 +15,23 @@ public class Parser {
 
 
 
+	public void reset() {
+		this.index = 0;
+	}
+
+
+
 	public char peek() {
 		return peekAt(index);
 	}
 
 	public char peekAt(int index) {
-		return index < source.length() ? source.charAt(index) : (char) 0;
+		return index < source.length() ? source.charAt(index) : EOF;
 	}
 
 	public String peek(int length) {
-		return source.substring(index, index + length);
+		int end = Math.min(source.length(), index + length);
+		return source.substring(index, end);
 	}
 
 
