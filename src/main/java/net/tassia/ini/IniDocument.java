@@ -2,6 +2,7 @@ package net.tassia.ini;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * Represents an entire INI document.
@@ -120,6 +121,21 @@ public class IniDocument {
 			this.root.put(path, value.toString());
 
 		}
+	}
+
+
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof IniDocument)) return false;
+		IniDocument that = (IniDocument) o;
+		return root.equals(that.root) && sections.equals(that.sections);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(root, sections);
 	}
 
 }
