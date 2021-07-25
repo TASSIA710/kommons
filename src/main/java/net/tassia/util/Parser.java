@@ -75,6 +75,16 @@ public class Parser {
 
 
 
+	public String readUntil(char until) {
+		StringBuilder builder = new StringBuilder();
+		while (peek() != until && !hasEndReached()) {
+			builder.append(next());
+		}
+		return builder.toString();
+	}
+
+
+
 	public void skipWhitespace() {
 		readWhile(Character::isWhitespace);
 	}
