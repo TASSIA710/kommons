@@ -2,6 +2,14 @@
 .idea/
 *.iml
 
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Visual Studio
+.vscode/
+
 # Gradle
 .gradle/
 gradle/
@@ -10,5 +18,6 @@ gradle/
 /gradle.properties
 
 # Build Output
-build/
+/bin/
+/build/
 /target/
