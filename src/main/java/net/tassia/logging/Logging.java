@@ -46,6 +46,9 @@ public final class Logging {
 			// Create the logger
 			Logger logger = Logger.getLogger(name);
 
+			// Set level
+			logger.setLevel(Logging.DEFAULT_LEVEL);
+
 			// Initialize the logger
 			reloadLogger(logger);
 
