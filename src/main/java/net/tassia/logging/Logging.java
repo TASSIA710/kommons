@@ -67,7 +67,9 @@ public final class Logging {
 	 * @see #reloadLogger(Logger)
 	 */
 	public static void reloadLoggers() {
-		// TODO
+		for (Logger logger : Logging.LOGGERS.values()) {
+			reloadLogger(logger);
+		}
 	}
 
 	/**
