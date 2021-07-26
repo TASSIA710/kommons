@@ -1,5 +1,9 @@
 package net.tassia.ini;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -136,6 +140,22 @@ public class IniDocument {
 	@Override
 	public int hashCode() {
 		return Objects.hash(root, sections);
+	}
+
+
+
+
+
+	/**
+	 * Loads an INI document from the given file.
+	 *
+	 * @param file the file to load from
+	 * @return the loaded document
+	 */
+	public static IniDocument load(File file) throws IOException {
+		byte[] data = Files.readAllBytes(file.toPath());
+		String str = new String(data, StandardCharsets.UTF_8);
+		return new IniParser(str).readDocument();
 	}
 
 }
