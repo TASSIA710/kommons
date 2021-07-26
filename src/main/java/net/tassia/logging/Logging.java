@@ -40,9 +40,6 @@ public final class Logging {
 			// Create the logger
 			Logger logger = Logger.getLogger(name);
 
-			// Register the logger
-			Logging.LOGGERS.put(name, logger);
-
 			// Initialize the logger
 			reloadLogger(logger);
 
