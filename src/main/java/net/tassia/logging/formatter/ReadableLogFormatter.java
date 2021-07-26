@@ -54,7 +54,7 @@ public class ReadableLogFormatter extends Formatter {
 		String date = dateFormat.format(new Date(record.getMillis()));
 		String name = record.getLoggerName();
 		name = name != null ? name + "@" + record.getLevel().getLocalizedName() : record.getLevel().getLocalizedName();
-		String prefix = date + " | " + name + ":";
+		String prefix = date + " | " + name + ": ";
 
 		// Append message
 		String msg = record.getMessage();
