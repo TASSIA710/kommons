@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Handler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -24,6 +25,11 @@ public final class Logging {
 	 * A collection containing the default handlers.
 	 */
 	private static final Collection<Handler> DEFAULT_HANDLERS = new ArrayList<>();
+
+	/**
+	 * The default logging level.
+	 */
+	private static Level DEFAULT_LEVEL = Level.INFO;
 
 
 
@@ -167,6 +173,30 @@ public final class Logging {
 			handler.close();
 		}
 		Logging.LOGGERS.remove(logger.getName());
+	}
+
+
+
+
+
+	/**
+	 * Returns the default level for new loggers.
+	 *
+	 * @return the default level
+	 */
+	public static Level getDefaultLevel() {
+		return Logging.DEFAULT_LEVEL;
+	}
+
+	/**
+	 * Updates the default level for new loggers.
+	 *
+	 * <b>Note:</b> This method does not reload all current loggers.
+	 *
+	 * @param defaultLevel the new default level
+	 */
+	public static void setDefaultLevel(Level defaultLevel) {
+		Logging.DEFAULT_LEVEL = defaultLevel;
 	}
 
 
