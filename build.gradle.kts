@@ -1,5 +1,5 @@
 group = "net.tassia"
-version = "1.0.0-P3"
+version = "1.0.0-P4"
 
 plugins {
 	java; `java-library`; `maven-publish`
