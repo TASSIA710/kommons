@@ -163,7 +163,8 @@ public final class Logging {
 	 * @see #closeLogger(Logger)
 	 */
 	public static void closeLoggers() {
-		for (Logger logger : Logging.LOGGERS.values()) {
+		Logger[] loggers = Logging.LOGGERS.values().toArray(new Logger[0]);
+		for (Logger logger : loggers) {
 			closeLogger(logger);
 		}
 	}
