@@ -138,7 +138,7 @@ public final class Logging {
 	 */
 	public static void flushLoggers() {
 		for (Logger logger : Logging.LOGGERS.values()) {
-			closeLogger(logger);
+			flushLogger(logger);
 		}
 	}
 
