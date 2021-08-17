@@ -7,13 +7,29 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gradle
+    strategy:
+      fail-fast: false
+      matrix:
+        module:
+          - project: ":commons-bom"
+            name: "Bill of Materials"
+          - project: ":commons-encoding"
+            name: "Encoding"
+          - project: ":commons-ini"
+            name: "INI Files"
+          - project: ":commons-logging"
+            name: "Logging"
+          - project: ":commons-parser"
+            name: "Parser"
+          - project: ":commons-security"
+            name: "Security"
     steps:
       - name: Checkout Repository
         uses: "actions/checkout@v2"
       - name: Start Gradle Daemon
         run: "gradle init"
-      - name: Build
-        run: "gradle assemble"
-      - name: Test
-        run: "gradle test"
+      - name: Build - ${{ matrix.name }}
+        run: "gradle ${{ matrix.project }}:assemble"
+      - name: Test - ${{ matrix.name }}
+        run: "gradle ${{ matrix.project }}:test"
 

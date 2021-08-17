@@ -1,0 +1,8 @@
+rootProject.name = 'commons'
+
+include 'commons-bom'
+include 'commons-encoding'
+include 'commons-ini'
+include 'commons-logging'
+include 'commons-parser'
+include 'commons-security'

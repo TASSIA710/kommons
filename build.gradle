@@ -1,0 +1,46 @@
+allprojects {
+
+	apply plugin: 'java'
+	apply plugin: 'java-library'
+	apply plugin: 'maven-publish'
+
+	group = 'net.tassia'
+	version = '1.0.0-P5'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+		testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.2'
+		testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+	}
+
+	test {
+		useJUnitPlatform()
+	}
+
+	java {
+		withJavadocJar()
+		withSourcesJar()
+	}
+
+	publishing {
+		publications {
+			maven(MavenPublication) {
+				from components.java
+			}
+		}
+		repositories {
+			maven {
+				url = uri('https://nexus.tassia.net/repository/maven-releases/')
+				credentials {
+					username = findProperty("PUBLISH_MAVEN_USERNAME") ?: "N/A"
+					password = findProperty("PUBLISH_MAVEN_PASSWORD") ?: "N/A"
+				}
+			}
+		}
+	}
+
+}

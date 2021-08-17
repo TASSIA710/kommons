@@ -1,0 +1,7 @@
+dependencies {
+	api project(':commons-encoding')
+	api project(':commons-ini')
+	api project(':commons-logging')
+	api project(':commons-parser')
+	api project(':commons-security')
+}
