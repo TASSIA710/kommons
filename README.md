@@ -10,9 +10,11 @@ to make development easier for you!
 
 
 
+
+
 ## Installation
 
-### Gradle
+### Gradle Kotlin
 
 ```kotlin
 repositories {
@@ -23,3 +25,47 @@ dependencies {
     implementation("net.tassia", "commons")
 }
 ```
+
+### Gradle Groovy
+
+```groovy
+repositories {
+    maven {
+        url = uri('https://nexus.tassia.net/repository/maven-public/')
+    }
+}
+
+dependencies {
+    implementation 'net.tassia:commons'
+}
+```
+
+### Maven
+
+*Coming soon.*
+
+
+
+
+
+## Features
+
+### Encodings
+
+*Coming soon.*
+
+### INI Files
+
+*Coming soon.*
+
+### Logging Framework
+
+*Coming soon.*
+
+### Parser
+
+*Coming soon.*
+
+### Security
+
+*Coming soon.*
