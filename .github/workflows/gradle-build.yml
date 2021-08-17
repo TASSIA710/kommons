@@ -3,7 +3,6 @@ on: [push, workflow_dispatch]
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     container:
       image: gradle
@@ -23,13 +22,14 @@ jobs:
             name: "Parser"
           - project: ":commons-security"
             name: "Security"
+    name: ${{ matrix.module.name }}
     steps:
       - name: Checkout Repository
         uses: "actions/checkout@v2"
       - name: Start Gradle Daemon
         run: "gradle init"
-      - name: Build - ${{ matrix.name }}
+      - name: Build - ${{ matrix.module.name }}
         run: "gradle ${{ matrix.project }}:assemble"
-      - name: Test - ${{ matrix.name }}
+      - name: Test - ${{ matrix.module.name }}
         run: "gradle ${{ matrix.project }}:test"
 
