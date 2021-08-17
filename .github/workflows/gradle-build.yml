@@ -29,7 +29,7 @@ jobs:
       - name: Start Gradle Daemon
         run: "gradle init"
       - name: Build - ${{ matrix.module.name }}
-        run: "gradle ${{ matrix.project }}:assemble"
+        run: "gradle ${{ matrix.module.project }}:assemble"
       - name: Test - ${{ matrix.module.name }}
-        run: "gradle ${{ matrix.project }}:test"
+        run: "gradle ${{ matrix.module.project }}:test"
 
