@@ -9,7 +9,7 @@ allprojects {
 	apply plugin: 'maven-publish'
 
 	group = 'net.tassia'
-	version = '1.0.0-P6'
+	version = '1.0.0-P7'
 
 	repositories {
 		mavenCentral()
