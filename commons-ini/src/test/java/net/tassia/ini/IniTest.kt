@@ -9,7 +9,7 @@ import java.io.InputStream
 class IniTest {
 
 	private fun getResource(path: String): String {
-		return IniTest::class.java.getResourceAsStream(path)?.use(InputStream::readAllBytes)
+		return IniTest::class.java.getResourceAsStream(path)?.use { it.readAllBytes() }
 			?.let { String(it, Charsets.UTF_8) } ?: throw AssertionError("Test resource does not exist: $path")
 	}
 
