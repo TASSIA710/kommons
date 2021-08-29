@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gradle
-    name: ${{ matrix.module.name }}
+    name: ${{ matrix.platform.name }}
     steps:
 
       - name: Checkout Repository
