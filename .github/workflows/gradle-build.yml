@@ -41,6 +41,10 @@ jobs:
         run: "gradle commons-ini:${{ matrix.platform.testTask }}"
         continue-on-error: true
 
+      - name: Build & Test - I/O
+        run: "gradle commons-io:${{ matrix.platform.testTask }}"
+        continue-on-error: true
+
       - name: Build & Test - Logging
         run: "gradle commons-logging:${{ matrix.platform.testTask }}"
         continue-on-error: true
@@ -55,4 +59,8 @@ jobs:
 
       - name: Build & Test - Utilities
         run: "gradle commons-utils:${{ matrix.platform.testTask }}"
+        continue-on-error: true
+
+      - name: Build & Test - UUID
+        run: "gradle commons-uuid:${{ matrix.platform.testTask }}"
         continue-on-error: true
