@@ -1,8 +1,11 @@
 rootProject.name = 'commons'
 
+include 'commons-annotations'
+include 'commons-assertions'
 include 'commons-bom'
 include 'commons-encoding'
 include 'commons-ini'
 include 'commons-logging'
 include 'commons-parser'
 include 'commons-security'
+include 'commons-utils'

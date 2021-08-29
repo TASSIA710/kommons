@@ -1,7 +1,16 @@
-dependencies {
-	api project(':commons-encoding')
-	api project(':commons-ini')
-	api project(':commons-logging')
-	api project(':commons-parser')
-	api project(':commons-security')
+kotlin {
+	sourceSets {
+		commonMain {
+			dependencies {
+				api project(':commons-annotations')
+				api project(':commons-assertions')
+				api project(':commons-encoding')
+				api project(':commons-ini')
+				api project(':commons-logging')
+				api project(':commons-parser')
+				api project(':commons-security')
+				api project(':commons-utils')
+			}
+		}
+	}
 }
