@@ -3,33 +3,47 @@ on: [push, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    container:
-      image: gradle
     strategy:
       fail-fast: false
       matrix:
-        module:
-          - project: ":commons-bom"
-            name: "Bill of Materials"
-          - project: ":commons-encoding"
-            name: "Encoding"
-          - project: ":commons-ini"
-            name: "INI Files"
-          - project: ":commons-logging"
-            name: "Logging"
-          - project: ":commons-parser"
-            name: "Parser"
-          - project: ":commons-security"
-            name: "Security"
+        platform:
+          - name: "Java Virtual Machine"
+            testTask: "jvmTest"
+    runs-on: ubuntu-latest
+    container:
+      image: gradle
     name: ${{ matrix.module.name }}
     steps:
+
       - name: Checkout Repository
         uses: "actions/checkout@v2"
-      - name: Start Gradle Daemon
-        run: "gradle init"
-      - name: Build - ${{ matrix.module.name }}
-        run: "gradle ${{ matrix.module.project }}:assemble"
-      - name: Test - ${{ matrix.module.name }}
-        run: "gradle ${{ matrix.module.project }}:test"
 
+      - name: Start Gradle Daemon
+        run: "gradle prepareKotlinBuildScriptModel"
+
+      - name: Build & Test - Annotations
+        run: "gradle commons-annotations:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Assertions
+        run: "gradle commons-assertions:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Bill of Materials
+        run: "gradle commons-bom:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Encoding
+        run: "gradle commons-encoding:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - INI Files
+        run: "gradle commons-ini:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Logging
+        run: "gradle commons-logging:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Parser
+        run: "gradle commons-parser:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Security
+        run: "gradle commons-security:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Utilities
+        run: "gradle commons-utils:${{ matrix.platform.testTask }}"
