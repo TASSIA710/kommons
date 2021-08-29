@@ -2,7 +2,7 @@ package net.tassia.assertions.struct
 
 import net.tassia.assertions.error.AssertionFailure
 
-class EqualsAssertion<T : Any?>(private val expected: T, private val actual: T, private val name: String?) : Assertion() {
+class EqualAssertion<T : Any?>(private val expected: T, private val actual: T, private val name: String?) : Assertion() {
 
 	override fun check() {
 		// Is valid?

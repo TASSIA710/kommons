@@ -4,7 +4,11 @@ val config = AssertionConfiguration().also {
 	it.enabled = true
 }
 
-inline fun <reified E : Throwable> expectError(block: () -> Unit) {
+inline fun expectSuccess(block: () -> Unit) {
+	block()
+}
+
+inline fun <reified E : Throwable> expectFailure(block: () -> Unit) {
 	try {
 		block()
 		throw AssertionError("Block was expected to throw ${E::class.simpleName}, but it didn't throw anything.")
