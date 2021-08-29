@@ -1,5 +1,6 @@
-package net.tassia.assertions.dsl
+package net.tassia.assertions
 
+import net.tassia.assertions.dsl.PendingValueBuilder
 import net.tassia.assertions.struct.GreaterEqualAssertion
 import net.tassia.assertions.struct.GreaterThanAssertion
 import net.tassia.assertions.struct.LessEqualAssertion

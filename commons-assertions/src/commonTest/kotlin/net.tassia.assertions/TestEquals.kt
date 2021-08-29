@@ -1,6 +1,5 @@
 package net.tassia.assertions
 
-import net.tassia.assertions.dsl.eq
 import net.tassia.assertions.error.AssertionFailure
 import kotlin.test.Test
 
