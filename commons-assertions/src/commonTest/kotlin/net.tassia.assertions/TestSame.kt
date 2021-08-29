@@ -26,7 +26,9 @@ class TestSame {
 	@Test
 	fun test4() {
 		expectError<AssertionFailure> {
-			assert(config) { expect("Hello World!") same "Hello World!" }
+			val str1 = "Hello World!"
+			val str2 = "Other Hello World!".substring("Other ".length)
+			assert(config) { expect(str1) same str2 }
 		}
 	}
 

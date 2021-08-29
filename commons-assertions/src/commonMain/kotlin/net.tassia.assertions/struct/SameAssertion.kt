@@ -1,5 +1,7 @@
 package net.tassia.assertions.struct
 
+import net.tassia.assertions.error.AssertionFailure
+
 class SameAssertion<T : Any?>(private val expected: T, private val actual: T, private val name: String?) : Assertion() {
 
 	override fun check() {
@@ -7,7 +9,8 @@ class SameAssertion<T : Any?>(private val expected: T, private val actual: T, pr
 		if (expected === actual) return
 
 		// Build message
-		TODO()
+		// TODO: Proper message
+		throw AssertionFailure(this, "Assertion failed.")
 	}
 
 }
