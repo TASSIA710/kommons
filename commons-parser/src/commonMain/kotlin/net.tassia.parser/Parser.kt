@@ -18,7 +18,8 @@ abstract class Parser {
 
 	open fun isNext(test: Char): Boolean {
 		if (peek() == test) {
-			assert { expect(next()) eq test }
+			val next = next()
+			assert { expect(next) eq test }
 			return true
 		}
 		return false
@@ -26,7 +27,8 @@ abstract class Parser {
 
 	open fun isNext(test: String): Boolean {
 		if (peek(test.length) == test) {
-			assert { expect(next(test.length)) eq test }
+			val next = next(test.length)
+			assert { expect(next) eq test }
 			return true
 		}
 		return false
