@@ -2,6 +2,7 @@ package net.tassia.parser
 
 import net.tassia.Namespace
 import net.tassia.assertions.assert
+import net.tassia.assertions.eq
 
 abstract class Parser {
 
