@@ -23,44 +23,33 @@ jobs:
 
       - name: Build & Test - Annotations
         run: "gradle commons-annotations:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - Assertions
         run: "gradle commons-assertions:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - Bill of Materials
         run: "gradle commons-bom:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - Encoding
         run: "gradle commons-encoding:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - INI Files
         run: "gradle commons-ini:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - I/O
         run: "gradle commons-io:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - Logging
         run: "gradle commons-logging:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - Parser
         run: "gradle commons-parser:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - Security
         run: "gradle commons-security:${{ matrix.platform.testTask }}"
-        continue-on-error: true
-
+        
       - name: Build & Test - Utilities
         run: "gradle commons-utils:${{ matrix.platform.testTask }}"
-        continue-on-error: true
 
       - name: Build & Test - UUID
         run: "gradle commons-uuid:${{ matrix.platform.testTask }}"
-        continue-on-error: true
