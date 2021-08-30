@@ -1,45 +1,20 @@
 package net.tassia.assertions
 
-/*
-
-Message Format:
-
-╔══════════ « Assertion Failed » ══════════
-║
-║	What went wrong?
-║	  ➥ Single line describing the problem.
-║
-║	Where's the difference?
-║	  ├─ Expected: "String123"
-║	  └─ But got: "String321"
-║
-║	Also cool: Nested blocks!
-║	  ├─ Sub Text 1
-║	  │    ├─ Sub-Sub Text 1
-║	  │    └─ Sub-Sub Text 2
-║	  ├─ Sub Text 2
-║	  │    ➥ Single line.
-║	  └─ Sub Text 3
-║
-╚══════════════════════════════════════════
-
- */
-
-internal fun buildMessage(blocks: List<MessageBlock>): String {
-	val builder = StringBuilder()
-
-	// Header
-	builder.append("\n\n+---------- Assertion Failed ----------\n")
-	builder.append("|\n")
-
-	// Body
-	for (block in blocks) {
-		TODO()
-		builder.append("|\n")
+internal fun <T : Any?> T.toDisplayString(): String {
+	if (this == null) {
+		return "null"
 	}
+	return when (this) {
+		is Boolean, is Int -> this.toString()
+		is Long -> "${this}L"
+		is Float -> "${this}F"
+		is Double -> "${this}D"
+		else -> this.toRepresentativeString()
+	}
+}
 
-	// Footer
-	builder.append("+--------------------------------------\n\n")
-
-	return builder.toString()
+internal fun <T : Any?> T.toRepresentativeString(): String {
+	val className = this?.let { it::class.simpleName } ?: "null"
+	val hashCode = this.hashCode().toString(16)
+	return toString() + " ($className @ $hashCode)"
 }

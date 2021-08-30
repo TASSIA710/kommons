@@ -7,17 +7,17 @@ import net.tassia.assertions.struct.LessEqualAssertion
 import net.tassia.assertions.struct.LessThanAssertion
 
 infix fun <T : Comparable<T>> PendingValueBuilder<T>.lt(that: T): LessThanAssertion<T> {
-	return LessThanAssertion(value, that, name)
+	return LessThanAssertion(value, that)
 }
 
 infix fun <T : Comparable<T>> PendingValueBuilder<T>.le(that: T): LessEqualAssertion<T> {
-	return LessEqualAssertion(value, that, name)
+	return LessEqualAssertion(value, that)
 }
 
 infix fun <T : Comparable<T>> PendingValueBuilder<T>.gt(that: T): GreaterThanAssertion<T> {
-	return GreaterThanAssertion(value, that, name)
+	return GreaterThanAssertion(value, that)
 }
 
 infix fun <T : Comparable<T>> PendingValueBuilder<T>.ge(that: T): GreaterEqualAssertion<T> {
-	return GreaterEqualAssertion(value, that, name)
+	return GreaterEqualAssertion(value, that)
 }

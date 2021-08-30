@@ -3,6 +3,7 @@ kotlin {
 		commonMain {
 			dependencies {
 				implementation project(':commons-annotations')
+				implementation project(':commons-utils')
 			}
 		}
 	}
