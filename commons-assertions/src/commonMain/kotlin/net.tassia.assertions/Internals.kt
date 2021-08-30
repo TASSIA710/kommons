@@ -17,7 +17,9 @@ Message Format:
 ║	  ├─ Sub Text 1
 ║	  │    ├─ Sub-Sub Text 1
 ║	  │    └─ Sub-Sub Text 2
-║	  └─ Sub Text 2
+║	  ├─ Sub Text 2
+║	  │    ➥ Single line.
+║	  └─ Sub Text 3
 ║
 ╚══════════════════════════════════════════
 
