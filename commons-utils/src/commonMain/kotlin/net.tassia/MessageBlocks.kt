@@ -1,5 +1,6 @@
 package net.tassia
 
+@MessageBlockDSL
 inline fun MessageBlock(title: String, block: MessageBlockBuilder.() -> Unit): MessageBlock {
 	return MessageBlockBuilder(title).also(block).build()
 }
