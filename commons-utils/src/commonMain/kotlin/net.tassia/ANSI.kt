@@ -18,4 +18,6 @@ object ANSI {
 	const val CYAN = "\u001B[36m"
 	const val WHITE = "\u001B[37m"
 
+	const val GRAY = "\u001B[38;2;127;127;127m"
+
 }
