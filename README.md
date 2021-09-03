@@ -65,6 +65,24 @@ assert { expect(41) eq 42 }
 
 Kommons provides easy ways to encode data in Base16 (hexadecimal) and Base64.
 
+**Example 1:**
+```kotlin
+println("SGVsbG8gV29ybGQh".base64().decodeToString())
+```
+
+**Result:**
+> Hello World!
+
+**Example 2:**
+```kotlin
+println(byteArrayOf(
+    0x3F, 0x5F, 0x7F
+).base16())
+```
+
+**Result:**
+> 3f5f7f
+
 [➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/encoding/README.md)
 
 
@@ -125,6 +143,22 @@ val hash = data.sha1().base16() // -> 2fd4e1c67a2d28fced849ee1bb76e7391b93eb12
 
 Besides all other features, Kommons also adds a bunch of smaller utilities, such as easily defining
 time durations, useful ANSI constants, array concatenations, multiplatform system calls and more.
+
+**Example 1:**
+```kotlin
+println(arrayOf("A", "B", "C").smartConcat())
+```
+
+**Result:**
+> A, B and C
+
+**Example 2:**
+```kotlin
+println(2.years)
+```
+
+**Result:**
+> *2 years in milliseconds as a Long, a number so big, I'm not going to write it here.*
 
 [➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/utils/README.md)
 
