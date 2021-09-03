@@ -1,0 +1,16 @@
+kotlin {
+	sourceSets {
+		commonMain {
+			dependencies {
+				api project(':kommons-annotations')
+				api project(':kommons-assertions')
+				api project(':kommons-encoding')
+				api project(':kommons-ini')
+				api project(':kommons-logging')
+				api project(':kommons-parser')
+				api project(':kommons-security')
+				api project(':kommons-utils')
+			}
+		}
+	}
+}

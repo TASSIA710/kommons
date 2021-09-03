@@ -25,7 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 **System:**
 Please include the following information:
-- Version of *commons* used
+- Version of *Kommons* used
 - Java version and distribution
 - Operating System and version
 

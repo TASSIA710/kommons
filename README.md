@@ -1,9 +1,9 @@
-# Commons
+# Kommons
 
-![](https://img.shields.io/github/license/TASSIA710/commons?label=License)
-![](https://img.shields.io/github/v/release/TASSIA710/commons?label=Stable)
-![](https://img.shields.io/github/v/release/TASSIA710/commons?label=Preview&include_prereleases)
-![](https://img.shields.io/github/workflow/status/TASSIA710/commons/Build/main?label=Build)
+![](https://img.shields.io/github/license/TASSIA710/kommons?label=License)
+![](https://img.shields.io/github/v/release/TASSIA710/kommons?label=Stable)
+![](https://img.shields.io/github/v/release/TASSIA710/kommons?label=Preview&include_prereleases)
+![](https://img.shields.io/github/workflow/status/TASSIA710/kommons/Build/main?label=Build)
 
 Adds multiplatform utilities, that save you time!
 
@@ -71,7 +71,7 @@ repositories {
 }
 
 dependencies {
-    implementation("net.tassia", "commons-bom", "1.0.0")
+    implementation("net.tassia", "kommons-bom", "1.0.0")
 }
 ```
 
@@ -85,7 +85,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'net.tassia:commons-bom:1.0.0'
+    implementation 'net.tassia:kommons-bom:1.0.0'
 }
 ```
 

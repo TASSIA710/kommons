@@ -22,34 +22,34 @@ jobs:
         run: "gradle prepareKotlinBuildScriptModel"
 
       - name: Build & Test - Annotations
-        run: "gradle commons-annotations:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-annotations:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - Assertions
-        run: "gradle commons-assertions:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-assertions:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - Bill of Materials
-        run: "gradle commons-bom:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-bom:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - Encoding
-        run: "gradle commons-encoding:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-encoding:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - INI Files
-        run: "gradle commons-ini:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-ini:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - I/O
-        run: "gradle commons-io:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-io:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - Logging
-        run: "gradle commons-logging:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-logging:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - Parser
-        run: "gradle commons-parser:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-parser:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - Security
-        run: "gradle commons-security:${{ matrix.platform.testTask }}"
-        
+        run: "gradle kommons-security:${{ matrix.platform.testTask }}"
+
       - name: Build & Test - Utilities
-        run: "gradle commons-utils:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-utils:${{ matrix.platform.testTask }}"
 
       - name: Build & Test - UUID
-        run: "gradle commons-uuid:${{ matrix.platform.testTask }}"
+        run: "gradle kommons-uuid:${{ matrix.platform.testTask }}"

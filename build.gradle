@@ -4,7 +4,7 @@ plugins {
 
 allprojects {
 
-	if (project.name == 'commons') {
+	if (project.name == 'kommons') {
 		return
 	}
 
