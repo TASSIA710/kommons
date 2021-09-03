@@ -5,8 +5,57 @@
 ![](https://img.shields.io/github/v/release/TASSIA710/commons?label=Preview&include_prereleases)
 ![](https://img.shields.io/github/workflow/status/TASSIA710/commons/Build/main?label=Build)
 
-Adds common utilities (such as Base16, safe digest strings, logging utilities, and much more!)
-to make development easier for you!
+Adds multiplatform utilities, that save you time!
+
+**Supported Platform:**
+
+- [x] JVM
+- [ ] JS/IR & JS/Legacy
+- [ ] Native (all)
+
+
+
+
+
+## Features
+
+### Annotations
+
+
+
+### Assertions
+
+
+
+### Encoding
+
+
+
+### INI Files
+
+
+
+### I/O Utilities
+
+
+
+### Logging
+
+
+
+### Parser
+
+
+
+### Security
+
+
+
+### Utilities
+
+
+
+### UUIDs
 
 
 
@@ -22,7 +71,7 @@ repositories {
 }
 
 dependencies {
-    implementation("net.tassia", "commons")
+    implementation("net.tassia", "commons-bom", "1.0.0")
 }
 ```
 
@@ -36,36 +85,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'net.tassia:commons'
+    implementation 'net.tassia:commons-bom:1.0.0'
 }
 ```
 
 ### Maven
-
-*Coming soon.*
-
-
-
-
-
-## Features
-
-### Encodings
-
-*Coming soon.*
-
-### INI Files
-
-*Coming soon.*
-
-### Logging Framework
-
-*Coming soon.*
-
-### Parser
-
-*Coming soon.*
-
-### Security
 
 *Coming soon.*
