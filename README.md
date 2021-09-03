@@ -23,7 +23,7 @@ Adds multiplatform utilities, that save you time!
 
 Kommons provides annotations, that may, or may not, be useful, depending on your use case.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/annotations/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/annotations/README.md)
 
 
 
@@ -57,7 +57,7 @@ assert { expect(41) eq 42 }
 > ╚══════════════════════════════════════════
 > ```
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/assertions/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/assertions/README.md)
 
 
 
@@ -65,7 +65,7 @@ assert { expect(41) eq 42 }
 
 Kommons provides easy ways to encode data in Base16 (hexadecimal) and Base64.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/encoding/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/encoding/README.md)
 
 
 
@@ -73,7 +73,7 @@ Kommons provides easy ways to encode data in Base16 (hexadecimal) and Base64.
 
 Kommons adds an easy way to read and write INI files.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/ini-files/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/ini-files/README.md)
 
 
 
@@ -84,7 +84,7 @@ convert primitives (like Longs) to byte arrays and vice versa.
 
 **Coming soon:** Stream utilities for the JVM target.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/io/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/io/README.md)
 
 
 
@@ -93,7 +93,7 @@ convert primitives (like Longs) to byte arrays and vice versa.
 Kommons does not come with its own logging framework (yet), but it provides lightweight handlers
 and formatters for the standard Java logging library.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/logging/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/logging/README.md)
 
 
 
@@ -101,7 +101,7 @@ and formatters for the standard Java logging library.
 
 Kommons also adds utilities for easily parsing textual inputs.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/parser/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/parser/README.md)
 
 
 
@@ -117,7 +117,7 @@ val data = "The quick brown fox jumps over the lazy dog".encodeToByteArray()
 val hash = data.sha1().base16() // -> 2fd4e1c67a2d28fced849ee1bb76e7391b93eb12
 ```
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/security/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/security/README.md)
 
 
 
@@ -126,7 +126,7 @@ val hash = data.sha1().base16() // -> 2fd4e1c67a2d28fced849ee1bb76e7391b93eb12
 Besides all other features, Kommons also adds a bunch of smaller utilities, such as easily defining
 time durations, useful ANSI constants, array concatenations, multiplatform system calls and more.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/utils/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/utils/README.md)
 
 
 
@@ -134,7 +134,7 @@ time durations, useful ANSI constants, array concatenations, multiplatform syste
 
 Kommons also adds a multiplatform implementation of a UUID, as defined by RFC 4122.
 
-[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/uuid/README.md)
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/uuid/README.md)
 
 
 
@@ -170,4 +170,23 @@ dependencies {
 
 ### Maven
 
-*Coming soon.*
+```xml
+<repositories>
+    <repository>
+        <id>tassia-nexus</id>
+        <url>https://nexus.tassia.net/repository/maven-public/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>net.tassia</groupId>
+        <artifactId>kommons-bom</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+</dependencies>
+```
+
+### Other
+
+[➥ View Artifact]([View Artifact](https://nexus.tassia.net/#browse/browse:maven-public:net%2Ftassia%2Fkommons-bom%2F1.0.0))
