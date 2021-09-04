@@ -39,12 +39,27 @@ data class Version (
 
 
 
+	val displayMM: String
+		inline get() = "$major.$minor"
+
+	val displayMMP: String
+		inline get() = "$displayMM.$patch"
+
+	val displayMMPB: String
+		inline get() = "$displayMMP, build $build"
+
+
+
 	override fun compareTo(other: Version): Int {
 		if (this.major != other.major) return this.major - other.major
 		if (this.minor != other.minor) return this.minor - other.minor
 		if (this.patch != other.patch) return this.patch - other.patch
 		if (this.build != other.build) return this.build - other.build
 		return 0
+	}
+
+	override fun toString(): String {
+		return extension?.let { "$displayMMP-$it" } ?: displayMMP
 	}
 
 
