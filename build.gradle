@@ -40,10 +40,6 @@ allprojects {
 	}
 
 	publishing {
-		publications {
-			maven(MavenPublication) {
-			}
-		}
 		repositories {
 			maven {
 				url = uri('https://nexus.tassia.net/repository/maven-releases/')
