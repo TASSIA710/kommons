@@ -10,6 +10,8 @@ kotlin {
 				api project(':kommons-parser')
 				api project(':kommons-security')
 				api project(':kommons-utils')
+				api project(':kommons-uuid')
+				api project(':kommons-version')
 			}
 		}
 	}
