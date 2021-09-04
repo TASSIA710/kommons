@@ -13,7 +13,7 @@ allprojects {
 	apply plugin: 'org.jetbrains.kotlin.multiplatform'
 
 	group = 'net.tassia'
-	version = '1.0.0-P7'
+	version = '1.0.0-P8'
 
 	repositories {
 		mavenCentral()
