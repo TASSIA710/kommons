@@ -18,3 +18,4 @@ Before you publish a new release, please take a look at this checklist.
   - [ ] *docs/module/security/README.md*
   - [ ] *docs/module/utils/README.md*
   - [ ] *docs/module/uuid/README.md*
+  - [ ] *docs/module/version/README.md*

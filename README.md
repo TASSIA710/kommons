@@ -172,6 +172,14 @@ Kommons also adds a multiplatform implementation of a UUID, as defined by RFC 41
 
 
 
+### Versions
+
+Adds a basic version class, comparable and serializable.
+
+[➥ Further Reading](https://github.com/TASSIA710/kommons/blob/main/docs/module/version/README.md)
+
+
+
 
 
 ## Installation
