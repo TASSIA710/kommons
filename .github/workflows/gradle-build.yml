@@ -53,3 +53,6 @@ jobs:
 
       - name: Build & Test - UUID
         run: "gradle kommons-uuid:${{ matrix.platform.testTask }}"
+
+      - name: Build & Test - Version
+        run: "gradle kommons-version:${{ matrix.platform.testTask }}"
