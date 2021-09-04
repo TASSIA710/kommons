@@ -231,4 +231,4 @@ dependencies {
 
 ### Other
 
-[➥ View Artifact]([View Artifact](https://nexus.tassia.net/#browse/browse:maven-public:net%2Ftassia%2Fkommons-bom%2F1.0.0))
+[➥ View Artifact](https://nexus.tassia.net/#browse/browse:maven-public:net%2Ftassia%2Fkommons-bom%2F1.0.0)
