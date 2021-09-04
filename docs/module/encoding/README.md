@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation("net.tassia", "kommons-encoding", "1.0.0")
+    implementation("net.tassia.kommons", "kommons-encoding", "1.0.0")
 }
 ```
 
@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'net.tassia:kommons-encoding:1.0.0'
+    implementation 'net.tassia.kommons:kommons-encoding:1.0.0'
 }
 ```
 
@@ -46,7 +46,7 @@ dependencies {
 
 <dependencies>
 <dependency>
-    <groupId>net.tassia</groupId>
+    <groupId>net.tassia.kommons</groupId>
     <artifactId>kommons-encoding</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -55,4 +55,4 @@ dependencies {
 
 ### Other
 
-[➥ View Artifact](https://nexus.tassia.net/#browse/browse:maven-public:net%2Ftassia%2Fkommons-annotations%2F1.0.0)
+[➥ View Artifact](https://nexus.tassia.net/#browse/browse:maven-public:net/tassia/kommons/kommons-encoding/1.0.0)
