@@ -42,7 +42,7 @@ allprojects {
 	publishing {
 		repositories {
 			maven {
-				url = uri('https://nexus.tassia.net/repository/maven-project-kommons/')
+				url = uri('https://nexus.tassia.net/repository/maven-tassia-kommons/')
 				credentials {
 					username = findProperty("PUBLISH_MAVEN_USERNAME") ?: "N/A"
 					password = findProperty("PUBLISH_MAVEN_PASSWORD") ?: "N/A"
