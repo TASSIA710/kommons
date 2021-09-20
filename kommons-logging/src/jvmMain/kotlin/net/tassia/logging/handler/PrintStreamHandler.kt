@@ -41,12 +41,6 @@ class PrintStreamHandler(private val stream: PrintStream, formatter: Formatter) 
         stream.close()
     }
 
-    /**
-     * Creates new PrintStreamHandler with the given underlying PrintStream.
-     *
-     * @param stream the stream to use
-     * @param formatter the formatter to use
-     */
     init {
         setFormatter(formatter)
     }

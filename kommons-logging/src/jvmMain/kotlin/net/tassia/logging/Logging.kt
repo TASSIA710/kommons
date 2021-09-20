@@ -27,7 +27,7 @@ object Logging {
     /**
      * The default logging level.
      */
-    var defaultLevel = Level.INFO
+    var defaultLevel: Level = Level.INFO
 
 
 

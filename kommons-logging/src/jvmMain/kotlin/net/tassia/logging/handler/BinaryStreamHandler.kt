@@ -71,7 +71,7 @@ class BinaryStreamHandler(private val stream: DataOutputStream) : Handler() {
         if (str == null) str = ""
         val bytes = str.toByteArray(StandardCharsets.UTF_8)
         for (i in bytes.indices) {
-            bytes[i] = bytes[i].inv().toByte()
+            bytes[i] = bytes[i].inv()
         }
 
         // Write data
