@@ -1,0 +1,3 @@
+dependencies {
+	commonMainApi "org.jetbrains.kotlin:kotlin-test:$KOTLIN_VERSION"
+}
